@@ -17,7 +17,13 @@ for letter in word:
 		# True?  We are done
 		pig = word + "yay"
 	else:
-		# False? Consonant
-		pig = word[1:] + word[0] + "ay"
-		
-print(pig)
+		# False? Conson
+		i = 0
+		spot = 0
+		for letter in word:
+			if word[i] in vowels:
+				
+				spot = i
+				break
+			i = i + 1
+pig = word[spot: len(word)] + word[0: spot] + "say"
